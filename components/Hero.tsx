@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex flex-col items-center justify-center px-4 overflow-hidden bg-[#CFE9F6] font-['Fredoka']">
+    <section className="relative w-full h-screen min-h-[600px] flex flex-col items-center justify-center px-4 overflow-hidden bg-[#CFE9F6] font-['Fredoka'] pt-20">
       
       {/* Balloon Layer - Fixed Position usually puts them relative to viewport, managed inside Balloon component */}
       {balloons.map(b => (
@@ -103,7 +103,7 @@ export const Hero: React.FC = () => {
       ))}
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center max-w-2xl w-full animate-fade-in-up">
+      <div className="relative z-10 flex flex-col items-center max-w-2xl w-full animate-fade-in-up mt-24">
         
         <h1 className="sr-only">$REDBALLOON Meme Token</h1>
         
