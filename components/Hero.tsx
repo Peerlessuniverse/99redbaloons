@@ -115,7 +115,7 @@ export const Hero: React.FC = () => {
         {/* Large Logo - Moved below tagline */}
         <div className="mb-8 transform hover:scale-105 transition-transform duration-300">
           <img 
-            src="https://aistudiocdn.com/aistudio-e678f11a-4134-4468-8981-c4417177f12e.png" 
+            src="/logo.png" 
             alt="$REDBALLOON Logo" 
             className="w-40 md:w-60 h-auto drop-shadow-2xl"
           />
