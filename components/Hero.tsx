@@ -106,12 +106,7 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 flex flex-col items-center max-w-2xl w-full animate-fade-in-up mt-24">
         
         <h1 className="sr-only">$REDBALLOON Meme Token</h1>
-        
-        {/* Tagline moved to Top */}
-        <p className="text-[#3B1F6A] text-lg md:text-xl mb-4 text-center tracking-wide font-['Chewy'] drop-shadow-sm">
-          “990M Dreams launched. Only 99M Ascend.”
-        </p>
-
+              
         {/* Large Logo - Moved below tagline */}
         <div className="mb-8 transform hover:scale-105 transition-transform duration-300">
           <img 
@@ -120,6 +115,10 @@ export const Hero: React.FC = () => {
             className="w-40 md:w-60 h-auto drop-shadow-2xl"
           />
         </div>
+
+        <p className="text-[#3B1F6A] text-lg md:text-xl mb-4 text-center tracking-wide font-['Chewy'] drop-shadow-sm">
+          “990M Dreams launched. Only 99M Ascend.”
+        </p>
 
         {/* Search/Chat Input Box */}
         <div className="w-full relative group z-20 max-w-lg">
