@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { MAX_WORDS, MAX_BALLOONS_ON_SCREEN, RED_VARIANTS } from '../constants';
 import { BalloonData } from '../types';
@@ -106,7 +107,7 @@ export const Hero: React.FC = () => {
       <div className="relative z-10 flex flex-col items-center max-w-2xl w-full animate-fade-in-up mt-24">
         
         <h1 className="sr-only">$REDBALLOON Meme Token</h1>
-              
+        
         {/* Large Logo - Moved below tagline */}
         <div className="mb-8 transform hover:scale-105 transition-transform duration-300">
           <img 

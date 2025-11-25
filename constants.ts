@@ -1,9 +1,10 @@
+
 export const NAV_ITEMS = [
   { label: 'About', href: '#about' },
   { label: 'Tokenomics', href: '#tokenomics' },
   { label: 'How to Buy', href: '#how-to-buy' },
   { label: 'Roadmap', href: '#roadmap' },
-  { label: 'Gallery', href: '#gallery' },
+  { label: 'Play', href: '#play' },
 ];
 
 export const RED_VARIANTS = [

@@ -1,23 +1,35 @@
+
 import React, { useState } from 'react';
 import { NAV_ITEMS } from '../constants';
 import { Menu, X } from 'lucide-react';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  onNavigate: (page: 'home' | 'game') => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, label: string) => {
     e.preventDefault();
     setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    
+    // Always navigate to home and scroll to section
+    onNavigate('home');
+    
+    // Timeout ensures we are on the home page before trying to scroll
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[72px] bg-[#3B1F6A] text-white shadow-lg flex items-center justify-between px-6 md:px-12 transition-all duration-300 font-['Fredoka']">
       {/* Logo Area */}
-      <div className="flex items-center gap-2 cursor-pointer select-none group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth'})}>
+      <div className="flex items-center gap-2 cursor-pointer select-none group" onClick={() => { onNavigate('home'); window.scrollTo({ top: 0, behavior: 'smooth'}) }}>
         <div className="relative">
           <div className="w-8 h-8 bg-[#E63946] rounded-full flex items-center justify-center shadow-inner group-hover:animate-bounce">
             <span className="text-white text-lg font-['Chewy'] pt-1">$</span>
@@ -33,7 +45,7 @@ export const Navbar: React.FC = () => {
           <a
             key={item.label}
             href={item.href}
-            onClick={(e) => handleNavClick(e, item.href)}
+            onClick={(e) => handleNavClick(e, item.href, item.label)}
             className="text-[#F5F7FA] hover:text-[#E63946] transition-colors font-medium text-lg tracking-wide"
           >
             {item.label}
@@ -57,7 +69,7 @@ export const Navbar: React.FC = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={(e) => handleNavClick(e, item.href)}
+              onClick={(e) => handleNavClick(e, item.href, item.label)}
               className="text-2xl font-bold text-white hover:text-[#E63946]"
             >
               {item.label}

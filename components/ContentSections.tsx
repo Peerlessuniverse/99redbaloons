@@ -1,5 +1,10 @@
+
 import React from 'react';
-import { Copy, ExternalLink, Wallet, ShoppingCart, Rocket } from 'lucide-react';
+import { Copy, ExternalLink, Wallet, ShoppingCart, Rocket, Gamepad2 } from 'lucide-react';
+
+interface ContentSectionsProps {
+  onNavigate: (page: 'home' | 'game') => void;
+}
 
 const SectionContainer = ({ id, className = "", children }: { id: string, className?: string, children?: React.ReactNode }) => (
   <section id={id} className={`py-20 px-6 md:px-12 max-w-6xl mx-auto font-['Fredoka'] ${className}`}>
@@ -13,20 +18,11 @@ const SectionTitle = ({ children }: { children?: React.ReactNode }) => (
   </h2>
 );
 
-export const ContentSections: React.FC = () => {
+export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) => {
   const copyAddress = () => {
     navigator.clipboard.writeText("8sF...pump"); // Placeholder address
     alert("Address copied to clipboard!");
   };
-
-  const memeGalleryItems = [
-    { prompt: "cactus hugging a red balloon romance funny meme", caption: "Forbidden Love" },
-    { prompt: "potato floating into the sky tied to a red balloon", caption: "My Portfolio Ascending" },
-    { prompt: "cat floating in space holding a single red balloon digital art", caption: "Adios, Earth" },
-    { prompt: "red balloon wearing a business suit at a meeting", caption: "Serious Inflation" },
-    { prompt: "skeleton sitting on a bench holding a red balloon waiting", caption: "Still HODLing" },
-    { prompt: "red balloon with a face screaming while floating away", caption: "No thoughts, just up" }
-  ];
 
   const burnMilestones = [
     { mc: "3 SOL", percent: "1%", amount: "9.9M" },
@@ -163,13 +159,13 @@ export const ContentSections: React.FC = () => {
       {/* ROADMAP */}
       <div className="bg-[#3B1F6A] text-white overflow-hidden">
         <SectionContainer id="roadmap">
-             <SectionTitle><span className="text-white">Roadmap</span></SectionTitle>
+             <SectionTitle><span className="text-white">Flight Plan</span></SectionTitle>
              <div className="relative border-l-4 border-white/20 ml-4 md:ml-0 md:pl-8 space-y-16 max-w-3xl mx-auto">
                 {[
-                    { q: "Q1", title: "Launch", items: ["Token Launch", "Float Engine Live", "Meme Gallery"] },
-                    { q: "Q2", title: "Ascension", items: ["Trending Sprint", "Early Floater NFT Airdrop"] },
-                    { q: "Q3", title: "Expansion", items: ["DEX Graduation", "Digital Merch"] },
-                    { q: "Q4", title: "Celebration", items: ["'Let It Float' Community Event"] }
+                    { q: "Phase 1", title: "Inflation", items: ["Token Launch on Pump.fun", "Website & Brand Reveal", "'Great Ascension' Game Live", "Community Formation"] },
+                    { q: "Phase 2", title: "Lift Off", items: ["Community-Driven Growth", "Milestone Burns Activated", "Organic Holder Distribution", "Meme Culture Expansion"] },
+                    { q: "Phase 3", title: "Stratosphere", items: ["Continuous Supply Deflation", "Game Leaderboard Contests", "Community-Led Initiatives", "Steady Ascension"] },
+                    { q: "Phase 4", title: "Orbit", items: ["Reaching 99M Supply Target", "Burn Mechanism Complete", "Pure Community Ownership", "Eternal Float Mode"] }
                 ].map((phase, idx) => (
                     <div key={idx} className="relative pl-8 md:pl-0 group">
                         <div className="absolute -left-[44px] md:-left-[44px] top-1 w-7 h-7 bg-[#E63946] rounded-full border-4 border-[#CFE9F6] group-hover:scale-125 transition-transform"></div>
@@ -188,25 +184,29 @@ export const ContentSections: React.FC = () => {
         </SectionContainer>
       </div>
 
-      {/* GALLERY */}
-      <SectionContainer id="gallery">
-        <SectionTitle>Gallery</SectionTitle>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {memeGalleryItems.map((item, i) => (
-                <div key={i} className="group relative aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all">
-                    <img 
-                        src={`https://image.pollinations.ai/prompt/${encodeURIComponent(item.prompt)}?width=400&height=400&nologo=true&seed=${i+55}`} 
-                        alt={`Meme ${i + 1}`} 
-                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                        loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-[#3B1F6A]/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center px-4 text-center">
-                        <p className="text-white font-['Chewy'] text-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform drop-shadow-md leading-none">
-                           "{item.caption}"
-                        </p>
-                    </div>
-                </div>
-            ))}
+      {/* GAME / PLAY */}
+      <SectionContainer id="play">
+        <SectionTitle>The Great Ascension</SectionTitle>
+        <div className="bg-gradient-to-br from-[#E63946] to-[#3B1F6A] rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                 {/* Decorative circles */}
+                 <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
+                 <div className="absolute bottom-10 right-10 w-48 h-48 bg-white rounded-full"></div>
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center">
+                <Gamepad2 size={64} className="mb-6 animate-bounce" />
+                <h3 className="text-3xl md:text-5xl font-['Chewy'] mb-4 tracking-wide">Ready to Ascend?</h3>
+                <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Pump the balloon, earn altitude, buy helium upgrades, and see how high you can float. Can you reach the moon?
+                </p>
+                <button 
+                    onClick={() => onNavigate('game')}
+                    className="bg-white text-[#E63946] px-10 py-4 rounded-full font-['Chewy'] text-2xl hover:scale-105 hover:bg-gray-100 transition-all shadow-lg border-b-8 border-gray-200 active:border-b-0 active:translate-y-2"
+                >
+                    PLAY NOW 🎈
+                </button>
+            </div>
         </div>
       </SectionContainer>
 
