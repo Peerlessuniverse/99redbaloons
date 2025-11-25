@@ -210,7 +210,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
         </div>
       </SectionContainer>
 
-      <footer className="bg-[#3B1F6A] py-12 text-center border-t border-white/10 font-['Fredoka'] flex flex-col items-center"">
+      <footer className="bg-[#3B1F6A] py-12 text-center border-t border-white/10 font-['Fredoka'] flex flex-col items-center">
          {/* Social Icons */}
         <div className="flex items-center gap-6 mb-8">
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white hover:scale-110 transition-all" aria-label="X (Twitter)">
