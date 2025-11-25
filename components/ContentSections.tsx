@@ -47,7 +47,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
             Most tokens promise the moon. We promise something simpler: <span className="font-bold text-[#E63946] font-['Chewy'] text-3xl px-1">buoyancy.</span>
           </p>
           <p className="text-gray-500 text-lg">
-            $REDBALLOON is a community experiment in collective ascension. 
+            $REDBALLOON is a DAO community experiment in collective ascension. 
             We don't pump; we float. When the market is heavy, we rise. 
             Not to the moon, just comfortably above the noise.
           </p>
