@@ -78,12 +78,12 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
                         <span className="font-medium text-gray-600">Circulating Supply</span>
-                        <span className="font-['Chewy'] text-2xl text-[#E63946]">69,000,000</span>
+                        <span className="font-['Chewy'] text-2xl text-[#E63946]">6,900,000</span>
                     </li>
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
                         <span className="font-medium text-gray-600">Max Supply</span>
-                        <span className="font-['Chewy'] text-2xl text-[#E63946]">69,000,000</span>
+                        <span className="font-['Chewy'] text-2xl text-[#E63946]">6,900,000</span>
                     </li>
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col gap-1">
@@ -103,7 +103,7 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
                     <circle cx="20" cy="20" r="15.915" fill="transparent" stroke="#E63946" strokeWidth="6" strokeDasharray="10 90" strokeDashoffset="-90" strokeLinecap="round"></circle> {/* 10% */}
                     <circle cx="20" cy="20" r="15.915" fill="transparent" stroke="#9333ea" strokeWidth="6" strokeDasharray="10 90" strokeDashoffset="-80" strokeLinecap="round"></circle> {/* 10% */}
                     <circle cx="20" cy="20" r="15.915" fill="transparent" stroke="#22c55e" strokeWidth="6" strokeDasharray="80 20" strokeDashoffset="0" strokeLinecap="round"></circle> {/* 80% */}
-                    <text x="20" y="20" dy="0.35em" textAnchor="middle" className="fill-[#3B1F6A] text-[0.35rem] font-['Chewy'] rotate-90">990M</text>
+                    <text x="20" y="20" dy="0.35em" textAnchor="middle" className="fill-[#3B1F6A] text-[0.35rem] font-['Chewy'] rotate-90">9,9M</text>
                 </svg>
                 <div className="mt-8 flex items-center gap-2 bg-gray-100/80 backdrop-blur px-6 py-3 rounded-full cursor-pointer hover:bg-[#E63946] hover:text-white transition-all group border border-gray-200 shadow-sm" onClick={copyAddress}>
                     <span className="font-mono text-sm md:text-base font-bold">CA: 8sF...pump</span>
@@ -149,7 +149,7 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
             {[
                 { icon: Wallet, title: "Create Wallet", desc: "Download Phantom or Solflare." },
                 { icon: Rocket, title: "Get SOL", desc: "Load up your wallet with some Solana." },
-                { icon: ExternalLink, title: "Go to Pump.fun", desc: "Find $REDBALLOON." },
+                { icon: ExternalLink, title: "Go to Raydium.io", desc: "Find $REDBALLOON." },
                 { icon: ShoppingCart, title: "Buy & Float", desc: "Swap SOL and join the club." }
             ].map((step, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-lg border-b-8 border-[#E63946] hover:-translate-y-2 transition-transform duration-300 group">
