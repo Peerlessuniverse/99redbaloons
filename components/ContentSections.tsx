@@ -167,7 +167,7 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
       {/* ROADMAP */}
       <div className="bg-[#3B1F6A] text-white overflow-hidden">
         <SectionContainer id="roadmap">
-             <SectionTitle><span className="text-white">Flight Plan</span></SectionTitle>
+             <SectionTitle><span className="text-white">Float Plan</span></SectionTitle>
              <div className="relative border-l-4 border-white/20 ml-4 md:ml-0 md:pl-8 space-y-16 max-w-3xl mx-auto">
                 {[
                     { q: "Phase 1", title: "Inflation", items: ["Token Launch on Raydium.io", "Website & Brand Reveal", "'Great Ascension' Game Live", "Community Formation"] },
