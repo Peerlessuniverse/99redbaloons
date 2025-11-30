@@ -44,7 +44,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <SectionTitle>About</SectionTitle>
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-medium">
-            Most tokens promise the moon. We promise something simpler: <span className="font-bold text-[#E63946] font-['Chewy'] text-3xl px-1">buoyancy.</span>
+            Most tokens promise the moon. We offer something punchy: <span className="font-bold text-[#E63946] font-['Chewy'] text-3xl px-1">buoyancy.</span>
           </p>
           <p className="text-gray-500 text-lg">
             $REDBALLOON is a DAO community experiment in collective ascension. 
@@ -62,7 +62,10 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
             <div className="space-y-6">
                {/* Deflationary Description */}
                <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                 $REDBALLOON starts with 990M supply and deflates toward 99M through milestone-based burns tied to marketcap growth. As the project ascends, supply tightens, liquidity strengthens, and rarity increases. A token born to float—and destined to ascend.
+                 $REDBALLOON was born with 9.9M tokens—but not all dreams are meant to stay grounded.
+Every three days, a burn ritual sheds a million more, lifting the project higher as the supply grows rarer and the narrative sharpens.
+By the end, only 6.9M remain on-chain, but the legend insists that just 990,000 reach the upper sky.
+A token that burns to rise. A meme that refuses gravity. A token born to float—and destined to ascend.
                </p>
 
                <div className="bg-white p-8 rounded-3xl shadow-lg border-2 border-blue-100 transform rotate-1 hover:rotate-0 transition-transform duration-300">
@@ -70,22 +73,27 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
                   <ul className="space-y-4 text-lg">
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
                         <span className="font-medium text-gray-600">Total Supply</span>
-                        <span className="font-['Chewy'] text-2xl text-[#3B1F6A]">990,000,000</span>
+                        <span className="font-['Chewy'] text-2xl text-[#3B1F6A]">9,900,000</span>
                     </li>
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
-                        <span className="font-medium text-gray-600">Final Target Supply</span>
-                        <span className="font-['Chewy'] text-2xl text-[#E63946]">99,000,000</span>
+                        <span className="font-medium text-gray-600">Circulating Supply</span>
+                        <span className="font-['Chewy'] text-2xl text-[#E63946]">69,000,000</span>
+                    </li>
+                    <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
+                    <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
+                        <span className="font-medium text-gray-600">Max Supply</span>
+                        <span className="font-['Chewy'] text-2xl text-[#E63946]">69,000,000</span>
                     </li>
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col gap-1">
                         <span className="font-medium text-gray-600">Burn Mechanism</span>
-                        <span className="font-['Fredoka'] text-base font-bold text-purple-600">Marketcap milestone burns (not time-based)</span>
+                        <span className="font-['Fredoka'] text-base font-bold text-purple-600">3x around 30 days (Marketcap milestone burns)</span>
                     </li>
                   </ul>
                </div>
                <button className="w-full bg-[#3B1F6A] text-white py-4 rounded-2xl font-['Chewy'] text-xl tracking-wide flex justify-center items-center gap-2 hover:bg-[#2a164f] hover:scale-[1.02] transition-all shadow-md border-b-4 border-[#220f45] active:border-b-0 active:translate-y-1">
-                 Buy on Pump.fun <ExternalLink size={20} />
+                 Buy on Raydium <ExternalLink size={20} />
                </button>
             </div>
             
@@ -162,7 +170,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
              <SectionTitle><span className="text-white">Flight Plan</span></SectionTitle>
              <div className="relative border-l-4 border-white/20 ml-4 md:ml-0 md:pl-8 space-y-16 max-w-3xl mx-auto">
                 {[
-                    { q: "Phase 1", title: "Inflation", items: ["Token Launch on Pump.fun", "Website & Brand Reveal", "'Great Ascension' Game Live", "Community Formation"] },
+                    { q: "Phase 1", title: "Inflation", items: ["Token Launch on Raydium.io", "Website & Brand Reveal", "'Great Ascension' Game Live", "Community Formation"] },
                     { q: "Phase 2", title: "Lift Off", items: ["Community-Driven Growth", "Milestone Burns Activated", "Organic Holder Distribution", "Meme Culture Expansion"] },
                     { q: "Phase 3", title: "Stratosphere", items: ["Continuous Supply Deflation", "Game Leaderboard Contests", "Community-Led Initiatives", "Steady Ascension"] },
                     { q: "Phase 4", title: "Orbit", items: ["Reaching 99M Supply Target", "Burn Mechanism Complete", "Pure Community Ownership", "Eternal Float Mode"] }
