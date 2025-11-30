@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
         </div>
 
         <p className="text-[#3B1F6A] text-lg md:text-xl mb-4 text-center tracking-wide font-['Chewy'] drop-shadow-sm">
-          “990M Dreams launched. Only 99M Ascend.”
+          “99M Dreams launched. Only 9,9M Ascend.”
         </p>
 
         {/* Search/Chat Input Box */}
