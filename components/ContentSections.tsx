@@ -73,7 +73,7 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
                   <ul className="space-y-4 text-lg">
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
                         <span className="font-medium text-gray-600">Total Supply</span>
-                        <span className="font-['Chewy'] text-2xl text-[#3B1F6A]">9,900,000</span>
+                        <span className="font-['Chewy'] text-2xl text-[#3B1F6A]">99,000,000</span>
                     </li>
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col md:flex-row justify-between md:items-center gap-1">
@@ -88,7 +88,7 @@ A token that burns to rise. A meme that refuses gravity. A token born to floatâ€
                     <div className="h-[2px] bg-gray-100 w-full rounded-full"></div>
                     <li className="flex flex-col gap-1">
                         <span className="font-medium text-gray-600">Burn Mechanism</span>
-                        <span className="font-['Fredoka'] text-base font-bold text-purple-600">3x around 30 days (Marketcap milestone burns)</span>
+                        <span className="font-['Fredoka'] text-base font-bold text-purple-600">3 timed burn rituals to remove 30 million forever. </span>
                     </li>
                   </ul>
                </div>
