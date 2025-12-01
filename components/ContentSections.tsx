@@ -112,32 +112,67 @@ A token that burns to rise. A meme that refuses gravity. A token born to float�
             </div>
           </div>
 
-          {/* NEW BURN TABLE */}
-          <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-blue-100">
-            <div className="bg-[#3B1F6A] px-6 py-4 border-b-2 border-[#220f45]">
-                <h3 className="text-2xl font-['Chewy'] text-white tracking-wide">Milestone Burn Schedule</h3>
-            </div>
-            <div className="overflow-x-auto">
-                <table className="w-full text-left min-w-[600px]">
-                    <thead className="bg-blue-50 text-[#3B1F6A]">
-                        <tr>
-                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Marketcap Milestone</th>
-                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Burn % <span className="text-sm font-['Fredoka'] opacity-70 font-normal">(of initial)</span></th>
-                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Burn Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-blue-50">
-                        {burnMilestones.map((row, idx) => (
-                            <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
-                                <td className="p-4 font-bold text-gray-700">{row.mc}</td>
-                                <td className="p-4 text-[#E63946] font-bold">{row.percent}</td>
-                                <td className="p-4 font-mono text-[#3B1F6A]">{row.amount}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-          </div>
+          <!-- BURN SCHEDULE — TIME-BASED RITUAL -->
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+<div class="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-blue-100">
+    <!-- Header -->
+    <div class="bg-[#3B1F6A] px-6 py-4 border-b-2 border-[#220f45]">
+        <h3 class="text-2xl font-['Chewy'] text-white tracking-wide">
+            Burn Ritual Schedule
+        </h3>
+        <p class="text-blue-200 font-['Fredoka'] text-sm mt-1">
+            Three sacred burns. Thirty million dreams released.
+        </p>
+    </div>
+
+    <!-- Table container -->
+    <div class="overflow-x-auto">
+        <table class="w-full text-left min-w-[600px]">
+            <!-- Table head -->
+            <thead class="bg-blue-50 text-[#3B1F6A]">
+                <tr>
+                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
+                        Ritual Day
+                    </th>
+                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
+                        Burn Amount
+                    </th>
+                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
+                        Supply After Burn
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- Table body -->
+            <tbody class="divide-y divide-blue-50 font-['Fredoka']">
+
+                <!-- Ritual I -->
+                <tr class="hover:bg-blue-50/30 transition-colors">
+                    <td class="p-4 font-bold text-gray-700">Day 3 — Ritual I</td>
+                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
+                    <td class="p-4 font-mono text-[#3B1F6A]">89,000,000 RBLN</td>
+                </tr>
+
+                <!-- Ritual II -->
+                <tr class="hover:bg-blue-50/30 transition-colors">
+                    <td class="p-4 font-bold text-gray-700">Day 6 — Ritual II</td>
+                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
+                    <td class="p-4 font-mono text-[#3B1F6A]">79,000,000 RBLN</td>
+                </tr>
+
+                <!-- Ritual III -->
+                <tr class="hover:bg-blue-50/30 transition-colors">
+                    <td class="p-4 font-bold text-gray-700">Day 9 — Ritual III</td>
+                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
+                    <td class="p-4 font-mono text-[#3B1F6A]">69,000,000 RBLN (Final)</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
         </SectionContainer>
       </div>
