@@ -62,9 +62,9 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
             <div className="space-y-6">
                {/* Deflationary Description */}
                <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                 $REDBALLOON was born with 9.9M tokens—but not all dreams are meant to stay grounded.
-Every three days, a burn ritual sheds a million more, lifting the project higher as the supply grows rarer and the narrative sharpens.
-By the end, only 6.9M remain on-chain, but the legend insists that just 990,000 reach the upper sky.
+                 $REDBALLOON was born with 99M tokens—but not all dreams are meant to stay grounded.
+Every three days, a burn ritual sheds a ten million more, lifting the project higher as the supply grows rarer and the narrative sharpens.
+By the end, only 69M remain on-chain, but the legend insists that just 9,900,000 reach the upper sky.
 A token that burns to rise. A meme that refuses gravity. A token born to float—and destined to ascend.
                </p>
 
