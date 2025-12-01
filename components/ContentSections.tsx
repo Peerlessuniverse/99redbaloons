@@ -24,16 +24,11 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
     alert("Address copied to clipboard!");
   };
 
-  const burnMilestones = [
-    { mc: "3 SOL", percent: "1%", amount: "9.9M" },
-    { mc: "10 SOL", percent: "2%", amount: "19.8M" },
-    { mc: "25 SOL", percent: "4%", amount: "39.6M" },
-    { mc: "50 SOL", percent: "8%", amount: "79.2M" },
-    { mc: "75 SOL", percent: "10%", amount: "99M" },
-    { mc: "100 SOL (Graduation)", percent: "20%", amount: "198M" },
-    { mc: "200 SOL", percent: "20%", amount: "198M" },
-    { mc: "400 SOL", percent: "20%", amount: "198M" },
-    { mc: "1000 SOL", percent: "15%", amount: "148.5M" },
+ const burnMilestones = [
+    { timeline: "Day 3", event: "Dev Wallet Burn (Phase 1)", amount: "9,999,999" },
+    { timeline: "Day 6", event: "Dev Wallet Burn (Phase 2)", amount: "9,999,999" },
+    { timeline: "Day 9", event: "Dev Wallet Burn (Final)", amount: "9,999,999" },
+    { timeline: "After Day 9", event: "Dev Wallet Balance", amount: "0 $RBLN (Empty)" },
   ];
 
   return (
@@ -126,52 +121,31 @@ A token that burns to rise. A meme that refuses gravity. A token born to float�
         </p>
     </div>
 
-    <!-- Table container -->
-    <div class="overflow-x-auto">
-        <table class="w-full text-left min-w-[600px]">
-            <!-- Table head -->
-            <thead class="bg-blue-50 text-[#3B1F6A]">
-                <tr>
-                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
-                        Ritual Day
-                    </th>
-                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
-                        Burn Amount
-                    </th>
-                    <th class="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">
-                        Supply After Burn
-                    </th>
-                </tr>
-            </thead>
-
-            <!-- Table body -->
-            <tbody class="divide-y divide-blue-50 font-['Fredoka']">
-
-                <!-- Ritual I -->
-                <tr class="hover:bg-blue-50/30 transition-colors">
-                    <td class="p-4 font-bold text-gray-700">Day 3 — Ritual I</td>
-                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
-                    <td class="p-4 font-mono text-[#3B1F6A]">89,000,000 RBLN</td>
-                </tr>
-
-                <!-- Ritual II -->
-                <tr class="hover:bg-blue-50/30 transition-colors">
-                    <td class="p-4 font-bold text-gray-700">Day 6 — Ritual II</td>
-                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
-                    <td class="p-4 font-mono text-[#3B1F6A]">79,000,000 RBLN</td>
-                </tr>
-
-                <!-- Ritual III -->
-                <tr class="hover:bg-blue-50/30 transition-colors">
-                    <td class="p-4 font-bold text-gray-700">Day 9 — Ritual III</td>
-                    <td class="p-4 text-[#E63946] font-bold">10,000,000 RBLN</td>
-                    <td class="p-4 font-mono text-[#3B1F6A]">69,000,000 RBLN (Final)</td>
-                </tr>
-
-            </tbody>
-        </table>
-    </div>
-</div>
+    <div className="mt-8 bg-white rounded-3xl shadow-lg overflow-hidden border-2 border-blue-100">
+            <div className="bg-[#3B1F6A] px-6 py-4 border-b-2 border-[#220f45]">
+                <h3 className="text-2xl font-['Chewy'] text-white tracking-wide">Burn Plan</h3>
+            </div>
+            <div className="overflow-x-auto">
+                <table className="w-full text-left min-w-[600px]">
+                    <thead className="bg-blue-50 text-[#3B1F6A]">
+                        <tr>
+                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Timeline</th>
+                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Event</th>
+                            <th className="p-4 font-['Chewy'] text-lg tracking-wide border-b border-blue-100">Amount / Status</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-blue-50">
+                        {burnMilestones.map((row, idx) => (
+                            <tr key={idx} className="hover:bg-blue-50/30 transition-colors">
+                                <td className="p-4 font-bold text-gray-700">{row.timeline}</td>
+                                <td className="p-4 text-[#E63946] font-bold">{row.event}</td>
+                                <td className="p-4 font-mono text-[#3B1F6A]">{row.amount}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+          </div>
 
 
         </SectionContainer>
