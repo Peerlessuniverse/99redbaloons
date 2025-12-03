@@ -7,9 +7,9 @@ import { BalloonClickerGame } from './components/BalloonClickerGame';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 
 function App() {
-  const [view, setView] = useState<'home' | 'game'>('home');
+  const [view, setView] = useState<'home' | 'game' | 'privacy'>('home');
 
-  const handleNavigate = (page: 'home' | 'game') => {
+  const handleNavigate = (page: 'home' | 'game' | 'privacy') => {
     setView(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -22,8 +22,10 @@ function App() {
           <Hero />
           <ContentSections onNavigate={handleNavigate} />
         </>
+      ) : view === 'game' ? (
+        <BalloonClickerGame onNavigate={handleNavigate} />
       ) : (
-        <BalloonClickerGame onBack={() => handleNavigate('home')} />
+        <PrivacyPolicy onBack={() => handleNavigate('home')} />
       )}
     </main>
   );
