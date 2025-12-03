@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ContentSections } from './components/ContentSections';
 import { BalloonClickerGame } from './components/BalloonClickerGame';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 
 function App() {
   const [view, setView] = useState<'home' | 'game'>('home');
