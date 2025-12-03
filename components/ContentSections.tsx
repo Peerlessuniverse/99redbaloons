@@ -238,6 +238,12 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
         <p className="text-white/40 text-sm">
              Not financial advice. Do not float responsibly.
         </p>
+        <button 
+            onClick={() => onNavigate('privacy')}
+            className="text-white/30 text-xs hover:text-white transition-colors underline decoration-white/30"
+        >
+            Privacy Policy (Bot)
+        </button>
       </footer>
     </div>
   );
