@@ -442,9 +442,8 @@ export const BalloonClickerGame: React.FC<GameProps> = ({ onBack }) => {
         </div>
         <button 
             onClick={() => onNavigate('privacy')}
-            className="text-[#3B1F6A]/50 text-xs hover:text-[#3B1F6A] transition-colors underline decoration-[#3B1F6A]/30"
-        >
-            Privacy Policy (Bot)
+            className="text-[#3B1F6A]/50 text-xs hover:text-[#3B1F6A] transition-colors underline decoration-[#3B1F6A]/30">
+          <p> Privacy Policy </p>
         </button>
       </footer>
     </div>
