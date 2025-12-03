@@ -440,6 +440,12 @@ export const BalloonClickerGame: React.FC<GameProps> = ({ onBack }) => {
             Made with helium & irony. 🎈 $REDBALLOON
             </p>
         </div>
+        <button 
+            onClick={() => onNavigate('privacy')}
+            className="text-[#3B1F6A]/50 text-xs hover:text-[#3B1F6A] transition-colors underline decoration-[#3B1F6A]/30"
+        >
+            Privacy Policy (Bot)
+        </button>
       </footer>
     </div>
   );
