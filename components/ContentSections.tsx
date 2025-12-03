@@ -3,7 +3,7 @@ import React from 'react';
 import { Copy, ExternalLink, Wallet, ShoppingCart, Rocket, Gamepad2 } from 'lucide-react';
 
 interface ContentSectionsProps {
-  onNavigate: (page: 'home' | 'game') => void;
+  onNavigate: (page: 'home' | 'game' | 'privacy') => void;
 }
 
 const SectionContainer = ({ id, className = "", children }: { id: string, className?: string, children?: React.ReactNode }) => (
@@ -235,7 +235,7 @@ export const ContentSections: React.FC<ContentSectionsProps> = ({ onNavigate }) 
         <p className="text-white/80 text-lg font-bold mb-2">
           Made with helium & irony. 🎈 $REDBALLOON
         </p>
-        <p className="text-white/40 text-sm">
+        <p className="text-white/40 text-sm mb-4">
              Not financial advice. Do not float responsibly.
         </p>
         <button 
